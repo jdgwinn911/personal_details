@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Personal Details</title>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body background="images/giphy1.gif" align="middle">
+    <center>
+    <h1><font color= "yellow">please fill in the blanks</h1></font>
+    <div class="thisone">
+    <font color= "yellow" size="5">street</font>
+    <br>
+    <form method="post" action='/address'> 
+    <input type="text" name="street" class="street" >
+    <br>
+    <font color= "yellow" size="5">city </font>
+    <br>
+    <input type="text" name="city" class="city" >    
+    <br>
+    <font color= "yellow" size="5">state </font>
+    <br>
+    <input type="text" name="state" class="state" >
+    <br>
+    <font color= "yellow" size="5">zip </font>
+    <br>
+    <input type="number" name="zip" class="zip" >
+    <input type="hidden" name="first_name" value="<%=first_name%>">
+    <input type="hidden" name="last_name" value="<%=last_name%>">
+    <br> <br>
+    <div class= "button">
+    <input type="button" onclick="goBack()" class="previous" value="&laquo; Previous">
+    <input type="submit" class="next" value="Next &raquo;">
+    </form>
+    </div>
+    </div>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+    </body>
+</html>

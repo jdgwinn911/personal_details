@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Personal Details</title>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body background="images/giphy1.gif" align="middle">
+    <center>
+    <h1><font color= "yellow">please list your three favorite numbers</h1></font>
+    <div class="thisone2">
+      <font color= "yellow" size="5">number 1</font>
+    <br>
+    <form method="post" action='/favenums'>
+     <input type="text" name="num1" class="num1" >
+    <br>
+    <font color= "yellow" size="5">number 2 </font>
+    <br>
+    <input type="text" name="num2" class="num2" >    
+    <br>
+    <font color= "yellow"size="5">number 3 </font>
+    <br>
+    <input type="text" name="num3" class="num3" > 
+    <input type="hidden" name="street" value="<%=street%>">
+    <input type="hidden" name="city" value="<%=city%>">
+    <input type="hidden" name="state" value="<%=state%>">
+    <input type="hidden" name="zip" value="<%=zip%>">
+    <input type="hidden" name= "first_name" value="<%=first_name%>">
+    <input type="hidden" name= "last_name" value="<%=last_name%>">
+     <br> <br>
+    <input type="button" onclick="goBack()" class="previous" value="&laquo; Previous">
+    <input type="submit" class="next" value="Next &raquo;">
+    
+</form>
+    </div>
+    </div>
+    <script>
+    function goBack() {
+        window.history.back();
+    }
+    </script>
+    </center>
+    </body>
+</html>
